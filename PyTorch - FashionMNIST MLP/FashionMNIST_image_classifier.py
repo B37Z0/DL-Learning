@@ -42,11 +42,11 @@ class NeuralNetwork(nn.Module):
         # nn.Sequential is a container that automatically chains layers together
         # Don't have to manually pass the output of each layer into the next in forward()
         self.linear_relu_stack = nn.Sequential(
-            nn.Linear(28*28, 512), # 1st hidden layer
+            nn.Linear(28*28, 512), # Hidden layer 1
             nn.ReLU(),
-            nn.Linear(512, 512), # 2nd hidden layer
+            nn.Linear(512, 512), # Hidden layer 2
             nn.ReLU(),
-            nn.Linear(512, 10)  # output layer
+            nn.Linear(512, 10)  # Output layer
         )
 
     def forward(self, x):
@@ -61,7 +61,7 @@ model = NeuralNetwork() #.to(device)
 print(model)
 
 
-### Training/Testing ###
+### Optimizing ###
 loss_fn = nn.CrossEntropyLoss()
 optimizer = torch.optim.SGD(model.parameters(), lr=1e-3)
 
