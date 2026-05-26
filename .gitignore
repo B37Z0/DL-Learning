@@ -2,5 +2,4 @@
 .venv/
 
 # Large files
-PyTorch - CIFAR10 Image Classifier/data/
-PyTo`rch - CIFAR10 Image Classifier\data/
+**/data/
