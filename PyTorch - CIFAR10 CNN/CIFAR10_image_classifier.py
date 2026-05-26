@@ -1,8 +1,6 @@
 import torch
-# Data processing
 import torchvision
 from torchvision.transforms import v2
-# Neural network
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
@@ -23,12 +21,12 @@ transform = v2.Compose([
 trainset = torchvision.datasets.CIFAR10(root='./data', train=True, download=True, transform=transform)
 testset = torchvision.datasets.CIFAR10(root='./data', train=False, download=True, transform=transform)
 
-# DataLoaders - 2 parallel processes for loading data
+# DataLoaders
 batch_size = 4
 trainloader = torch.utils.data.DataLoader(trainset, batch_size=batch_size, shuffle=True)
 testloader = torch.utils.data.DataLoader(testset, batch_size=batch_size, shuffle=False)
 
-# Class labels - the NN only works with indices 0-9
+# Class labels - 10 output neurons / indices 0-9
 classes = ('plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck')
 
 
@@ -47,7 +45,8 @@ class Net(nn.Module):
     def forward(self, x):
         x = self.pool(F.relu(self.conv1(x)))
         x = self.pool(F.relu(self.conv2(x)))
-        x = torch.flatten(x, 1) # flatten all dimensions except batch
+        # Flatten all dimensions except batch size 
+        x = torch.flatten(x, 1) 
         x = F.relu(self.fc1(x))
         x = F.relu(self.fc2(x))
         x = self.fc3(x)
@@ -66,7 +65,7 @@ for epoch in range(2):
     running_loss = 0.0
 
     for i, data in enumerate(trainloader, 0):
-        inputs, labels = data # data is a list of [inputs, labels]
+        inputs, labels = data
 
         # Forward pass
         outputs = net(inputs)
@@ -78,23 +77,23 @@ for epoch in range(2):
         optimizer.step()
 
         running_loss += loss.item()
-        if i % 2000 == 1999:    # print every 2000 mini-batches
+        if i % 2000 == 1999: # print every 2000 mini-batches
             print(f'[{epoch + 1}, {i + 1:5d}] loss: {running_loss / 2000:.3f}')
             running_loss = 0.0
 
 print('Finished Training')
 
-# Save the trained model's parameters (recommended way)
+# Save model parameters
 PATH = './cifar_net.pt'
 torch.save(net.state_dict(), PATH)
 
 
 ### Test the neural network ###
-# Load the saved model's parameters - just for demonstration
+# Load the saved model's parameters - redundant
 net = Net()
 net.load_state_dict(torch.load(PATH, weights_only=True))
 
-## Across the whole dataset ##
+## Total accuracy ##
 correct = 0
 total = 0
 with torch.no_grad(): # no gradients needed since we're not training
