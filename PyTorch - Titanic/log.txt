@@ -1,0 +1,158 @@
+Net(
+  (embeds): ModuleList(
+    (0): Embedding(3, 4)
+    (1): Embedding(4, 4)
+    (2-3): 2 x Embedding(5, 5)
+    (4): Embedding(6, 5)
+  )
+  (linear_relu_stack): Sequential(
+    (0): Linear(in_features=30, out_features=64, bias=True)
+    (1): ReLU()
+    (2): Linear(in_features=64, out_features=32, bias=True)
+    (3): ReLU()
+    (4): Linear(in_features=32, out_features=2, bias=True)
+  )
+)
+Epoch 1
+-------------------------------
+loss: 0.690491  [   64/  891]
+loss: 0.613266  [  704/  891]
+Test Error: 
+ Accuracy: 67.6%, Avg loss: 0.567463
+
+Epoch 2
+-------------------------------
+loss: 0.555048  [   64/  891]
+loss: 0.530521  [  704/  891]
+Test Error: 
+ Accuracy: 78.7%, Avg loss: 0.493537
+
+Epoch 3
+-------------------------------
+loss: 0.556451  [   64/  891]
+loss: 0.527348  [  704/  891]
+Test Error: 
+ Accuracy: 79.7%, Avg loss: 0.453042
+
+Epoch 4
+-------------------------------
+loss: 0.385468  [   64/  891]
+loss: 0.485257  [  704/  891]
+Test Error: 
+ Accuracy: 80.9%, Avg loss: 0.426452
+
+Epoch 5
+-------------------------------
+loss: 0.329230  [   64/  891]
+loss: 0.440230  [  704/  891]
+Test Error: 
+ Accuracy: 82.6%, Avg loss: 0.409129
+
+Epoch 6
+-------------------------------
+loss: 0.275558  [   64/  891]
+loss: 0.261161  [  704/  891]
+Test Error: 
+ Accuracy: 82.6%, Avg loss: 0.396761
+
+Epoch 7
+-------------------------------
+loss: 0.429275  [   64/  891]
+loss: 0.419233  [  704/  891]
+Test Error: 
+ Accuracy: 83.4%, Avg loss: 0.388701
+
+Epoch 8
+-------------------------------
+loss: 0.429412  [   64/  891]
+loss: 0.442058  [  704/  891]
+Test Error: 
+ Accuracy: 84.1%, Avg loss: 0.384323
+
+Epoch 9
+-------------------------------
+loss: 0.348671  [   64/  891]
+loss: 0.424586  [  704/  891]
+Test Error: 
+ Accuracy: 84.6%, Avg loss: 0.378774
+
+Epoch 10
+-------------------------------
+loss: 0.338800  [   64/  891]
+loss: 0.367957  [  704/  891]
+Test Error: 
+ Accuracy: 84.5%, Avg loss: 0.375247
+
+Epoch 11
+-------------------------------
+loss: 0.391843  [   64/  891]
+loss: 0.439752  [  704/  891]
+Test Error: 
+ Accuracy: 84.5%, Avg loss: 0.371025
+
+Epoch 12
+-------------------------------
+loss: 0.266498  [   64/  891]
+loss: 0.421041  [  704/  891]
+Test Error: 
+ Accuracy: 84.5%, Avg loss: 0.369067
+
+Epoch 13
+-------------------------------
+loss: 0.289624  [   64/  891]
+loss: 0.272504  [  704/  891]
+Test Error: 
+ Accuracy: 84.4%, Avg loss: 0.367650
+
+Epoch 14
+-------------------------------
+loss: 0.325975  [   64/  891]
+loss: 0.377764  [  704/  891]
+Test Error: 
+ Accuracy: 85.0%, Avg loss: 0.364615
+
+Epoch 15
+-------------------------------
+loss: 0.417023  [   64/  891]
+loss: 0.335569  [  704/  891]
+Test Error: 
+ Accuracy: 84.8%, Avg loss: 0.362585
+
+Epoch 16
+-------------------------------
+loss: 0.272831  [   64/  891]
+loss: 0.301528  [  704/  891]
+Test Error: 
+ Accuracy: 85.0%, Avg loss: 0.361566
+
+Epoch 17
+-------------------------------
+loss: 0.316183  [   64/  891]
+loss: 0.378876  [  704/  891]
+Test Error: 
+ Accuracy: 85.4%, Avg loss: 0.358925
+
+Epoch 18
+-------------------------------
+loss: 0.299495  [   64/  891]
+loss: 0.307017  [  704/  891]
+Test Error: 
+ Accuracy: 85.2%, Avg loss: 0.356809
+
+Epoch 19
+-------------------------------
+loss: 0.291475  [   64/  891]
+loss: 0.384043  [  704/  891]
+Test Error: 
+ Accuracy: 85.1%, Avg loss: 0.355775
+
+Epoch 20
+-------------------------------
+loss: 0.221601  [   64/  891]
+loss: 0.322778  [  704/  891]
+Test Error: 
+ Accuracy: 85.4%, Avg loss: 0.354456
+
+Training complete
+Saved PyTorch Model State to ./titanic_net.pth
+submission.csv created

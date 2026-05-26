@@ -3,3 +3,4 @@
 
 # Large files
 **/data/
+!PyTorch - Titanic/data/
