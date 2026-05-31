@@ -169,8 +169,8 @@ optimizer_ft = optim.SGD(model_ft.parameters(), lr=0.001, momentum=0.9)
 exp_lr_scheduler = lr_scheduler.StepLR(optimizer_ft, step_size=7, gamma=0.1)
 
 model_ft = train_model(model_ft, criterion, optimizer_ft, exp_lr_scheduler, num_epochs=25)
-torch.save(model_ft.state_dict(), 'model_ft.pth')
-print("Saved model_ft to model_ft.pth")
+torch.save(model_ft.state_dict(), 'resnet18_ft.pth')
+print("Saved model_ft to resnet18_ft.pth")
 visualize_model(model_ft)
 
 
@@ -192,6 +192,6 @@ optimizer_conv = optim.SGD(model_conv.fc.parameters(), lr=0.001, momentum=0.9)
 exp_lr_scheduler = lr_scheduler.StepLR(optimizer_conv, step_size=7, gamma=0.1)
 
 model_conv = train_model(model_conv, criterion, optimizer_conv, exp_lr_scheduler, num_epochs=25)
-torch.save(model_conv.state_dict(), 'model_conv.pth')
-print("Saved model_conv to model_conv.pth")
+torch.save(model_conv.state_dict(), 'resnet18_conv.pth')
+print("Saved model_conv to resnet18_conv.pth")
 visualize_model(model_conv)
