@@ -3,4 +3,8 @@
 
 # Large files
 **/data/
-!PyTorch - Titanic/data/
+!MLPs + CNNs/PyTorch - Titanic/data/
+
+# Other files
+**/__pycache__/
+*.py[cod]
