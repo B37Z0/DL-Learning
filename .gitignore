@@ -1,8 +1,10 @@
 # Environments
 .venv/
+.vscode/
 
 # Large files
 **/data/
+**/yolo_weights/
 !MLPs + CNNs/PyTorch - Titanic/data/
 
 # Other files
