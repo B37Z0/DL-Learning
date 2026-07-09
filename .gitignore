@@ -4,6 +4,7 @@
 
 # Large files
 **/data/
+**/datasets/
 **/yolo_weights/
 !MLPs + CNNs/PyTorch - Titanic/data/
 
