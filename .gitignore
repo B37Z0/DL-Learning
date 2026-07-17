@@ -1,5 +1,5 @@
 # Environments
-.venv/
+**/venv/
 .vscode/
 
 # Large files
