@@ -6,7 +6,7 @@ A collection of deep learning projects.
 
 | Project | Description | Model | Dataset |
 |---|---|---|---|
-| [XOR Simple MLP](MLPs+++CNNs/NumPy+-+XOR+Simple+MLP) | Binary classification on XOR - MLP from scratch | 2→4→1 MLP (NumPy) | XOR truth table |
+| [XOR Simple MLP](MLPs+CNNs/NumPy+-+XOR+Simple+MLP) | Binary classification on XOR - MLP from scratch | 2→4→1 MLP (NumPy) | XOR truth table |
 | [FashionMNIST MLP] | 10-class clothing image classification | 784→512→512→10 MLP | FashionMNIST |
 | [LeNet-5] | Handwritten digit classification - classic LeNet-5 architecture | LeNet-5 (Conv→Pool→Conv→Pool→FC) | MNIST |
 | [CIFAR-10 CNN] | 10-class color image classification | 2-conv + 3-FC network | CIFAR-10 |
